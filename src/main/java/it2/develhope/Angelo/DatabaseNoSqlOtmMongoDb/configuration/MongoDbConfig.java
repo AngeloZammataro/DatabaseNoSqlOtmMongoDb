@@ -15,12 +15,12 @@ public class MongoDbConfig extends AbstractMongoClientConfiguration {
 
     @Override
     protected String getDatabaseName() {
-        return "develhope";
+        return "nosqlorm";
     }
 
     @Override
     public MongoClient mongoClient() {
-        ConnectionString connectionString = new ConnectionString("mongodb+srv://develhope:develhope@cluster0.9kfkqck.mongodb.net/?retryWrites=true&w=majority");
+        ConnectionString connectionString = new ConnectionString("mongodb://localhost:27017");
         MongoClientSettings mongoClientSettings = MongoClientSettings.builder()
                 .applyConnectionString(connectionString)
                 .build();
